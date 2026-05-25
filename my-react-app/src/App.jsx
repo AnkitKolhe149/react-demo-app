@@ -6,6 +6,7 @@ import Repeatcard from "./components/repeat-card"
 function App() {
 
   const [count, setCount] = useState(0);
+  const [name , setname ] = useState("");
   
   return (
     
@@ -17,6 +18,12 @@ function App() {
     <button onClick={() => setCount(count - 1)}>Decrement</button>
     <button onClick={() => setCount(0)}>Reset</button>
     </>
+      <hr/>
+
+      <>
+      <input type="text" placeholder="Enter your name" value={name} onChange={(e) => setname(e.target.value)} />
+      <p>Hello, {name}!</p>
+      </>
       <hr/>
 
          <JsxPracticeTask />
