@@ -1,10 +1,33 @@
+import { useState } from "react"
 import JsxPracticeTask from "./components/JsxPracticeTask"
 import Moviecard from "./components/moviecard"
+import Greetings from "./components/greetings"
 function App() {
+
+  const [count, setCount] = useState(0);
+  
   return (
+    
     <div>
+        <>
+    <h1>{count}</h1>
+    <button onClick={() => setCount(count + 1)}>Increment</button>
+    <button onClick={() => setCount(count - 1)}>Decrement</button>
+    <button onClick={() => setCount(0)}>Reset</button>
+    </>
+      
 
          <JsxPracticeTask />
+         
+
+          <hr/>
+          
+          <Greetings />
+
+          <hr/>
+
+
+
          <Moviecard title="Inception" genre="Sci-Fi" rating="8.8" duartion="2h 28m" img="https://th.bing.com/th/id/OIP.aBtnNKt5_4K6TQyjgT4XfgHaKy?w=207&h=301&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" language="English" />
          <Moviecard title="The Dark Knight" genre="Action" rating="9.0" duartion="2h 32m" img="https://th.bing.com/th/id/OIP.fHpPU6o1tvzQqqBoUR3mLAHaKw?w=207&h=301&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" language="English" />
          <Moviecard title="Interstellar" genre="Sci-Fi" rating="8.6" duartion="2h 49m" img="https://th.bing.com/th/id/OIP.aQHX3A1wOkGE-4-MWO-tGQHaK0?w=206&h=302&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" language="English" />
