@@ -2,6 +2,7 @@ import { useState } from "react"
 import JsxPracticeTask from "./components/JsxPracticeTask"
 import Moviecard from "./components/moviecard"
 import Greetings from "./components/greetings"
+import Repeatcard from "./components/repeat-card"
 function App() {
 
   const [count, setCount] = useState(0);
@@ -10,12 +11,13 @@ function App() {
     
     <div>
         <>
+        <p>Counter App</p>
     <h1>{count}</h1>
     <button onClick={() => setCount(count + 1)}>Increment</button>
     <button onClick={() => setCount(count - 1)}>Decrement</button>
     <button onClick={() => setCount(0)}>Reset</button>
     </>
-      
+      <hr/>
 
          <JsxPracticeTask />
          
@@ -23,6 +25,12 @@ function App() {
           <hr/>
           
           <Greetings />
+
+          <hr/>
+          <p> Calling from a single card.</p>
+          <Repeatcard name="Ayesha" age={20} city="Pune"/>
+          <Repeatcard name="Ravi" age={21} city="Mumbai"/>
+          <Repeatcard name="Priya" age={19} city="Nagpur"/>
 
           <hr/>
 
